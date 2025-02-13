@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartita para Monsse🥰</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   <!-- Botón para abrir la tarjeta -->
+   <button id="open-card-btn" onclick="openCard()">Abrir carta</button>
+
+   <!-- Tarjeta que se ocultará por defecto -->
+   <div id="card" class="card" style="display: none;">
+       <!-- Título de la tarjeta -->
+       <h2 class="card-title">❤️Algunas peditas❤️</h2>
+
+
+        <!-- Carrusel de imágenes -->
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG-20240413-WA0155.jpg" alt="Imagen 2">
+                </div>
+                <div class="carousel-item active">
+                    <img src="fotos/Foticos/IMG_20241029_143924_558.webp" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG-20240413-WA0151.jpg" alt="Imagen 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG-20240413-WA0149.jpg" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20241029_173646_997.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240913_145348_762.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240910_190953_516.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240910_170834_138.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240910_155022_001.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240906_145758_491.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240809_155140_757.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240730_191301_666.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240627_152539_115.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240525_182136_447.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240525_182027_481.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240525_181939_574.webp" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="fotos/Foticos/IMG_20240525_155812_089.webp" alt="Imagen 2">
+                </div>
+            </div>
+            <!-- Botones de control del carrusel -->
+            <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <!-- Botones debajo del carrusel -->
+        <div class="card-buttons">
+            <button class="btn btn-primary" onclick="showVideoGallery()">Videos Random</button>
+            <button class="btn btn-secondary" onclick="showPhotoGallery()">Aqui tu muy buapa 😘</button>
+        </div>
+
+       <!-- Descripción de la tarjeta -->
+<p class="card-description">
+  ❤️ El amor por ti nació en un suspiro,  
+  entre silencios y risas compartidas,  
+  un lazo invisible que se hizo eterno,  
+  en los momentos más simples y divertidos.  
+  Fue el roce de miradas, sin palabras,  
+  un encuentro inesperado que despertó el alma,  
+  y desde entonces, mi corazón te busca,  
+  con cada latido, te siento más cerca. ❤️
+</p>
+<p class="card-description">
+  💕 POS VAMOR UNA MICHE NO?  
+  ATTE: ZAMORA BESO PARA TI 🤭 💕
+</p>
+
+      
+
+
+        <!-- Galería de videos (oculta por defecto) -->
+        <div id="video-gallery" class="gallery" style="display: none;">
+            <h3>Galería de Videos</h3>
+            <div class="gallery-items">
+                <video controls>
+                    <source src="fotos/Foticos/VID_20241126_134819_878.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+                <video controls>
+                    <source src="fotos/Foticos/VID_20241126_170717_037.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+                <video controls>
+                    <source src="fotos/Foticos/VID_27140628_224352_537.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+                <video controls>
+                    <source src="fotos/Foticos/VID-20241123-WA0129.mp4" type="video/mp4">
+                    Tu navegador no soporta el formato de video.
+                </video>
+            </div>
+            <button class="close-gallery" onclick="closeGallery('video-gallery')">Cerrar</button>
+        </div>
+
+       <!-- Galería de fotos (oculta por defecto) -->
+<div id="photo-gallery" class="gallery" style="display: none;">
+  <h3>Galería de Fotos</h3>
+  <div class="gallery-items">
+      <figure>
+          <img src="fotos/Foticos/Screenshot_20240726_175655_WhatsApp.jpg" alt="Foto 1">
+          <figcaption>JAJAJA de aqui salio un buen stiker👌</figcaption>
+      </figure>
+      <figure>
+          <img src="fotos/Foticos/IMG-20230704-WA0024.jpg" alt="Foto 2">
+          <figcaption>Ojito q esta estubo de fondo de pantalla sisisis ❤️</figcaption>
+      </figure>
+      <figure>
+          <img src="fotos/Foticos/IMG-20230704-WA0023.jpg" alt="Foto 3">
+          <figcaption> JAJA soporte 👁️👄👁️</figcaption>
+      </figure>
+      <figure>
+          <img src="fotos/Foticos/IMG-20230626-WA0155.jpg" alt="Foto 4">
+          <figcaption>Aqui te miras muy linda ❤️❤️</figcaption>
+      </figure>
+
+      <figure>
+        <img src="fotos/Foticos/IMG-20250201-WA0069.jpg" alt="Foto 4">
+        <figcaption>A mi me gustan mucho de esas 🫢 </figcaption>
+    </figure>
+    <figure>
+      <img src="fotos/Foticos/IMG_20241011_134248_160.webp" alt="Foto 4">
+      <figcaption>Besito 🥰</figcaption>
+  </figure>
+  <figure>
+    <img src="fotos/Foticos/IMG_20240930_132341_719.webp" alt="Foto 4">
+    <figcaption> 🤡🤡🤡</figcaption>
+</figure>
+<figure>
+  <img src="fotos/Foticos/IMG_20240910_181945_048.webp" alt="Foto 4">
+  <figcaption>❤️❤️</figcaption>
+</figure>
+
+<figure>
+  <img src="fotos/Foticos/3070de79804ae32cdc1d9d871ea34644.jpg" alt="Foto 4">
+  <figcaption>❤️ No se por que, pero me mama eso foto ❤️(^///^)</figcaption>
+</figure>
+  </div>
+  <button class="close-gallery" onclick="closeGallery('photo-gallery')">Cerrar</button>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

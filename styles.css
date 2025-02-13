@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  margin-top: 7cm;
+  margin-bottom: 7cm;  /* Agrega un margen en la parte inferior */
+  background-color: #f0f0f0;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+/* Estilos de la tarjeta */
+.card {
+  width: 350px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Título de la tarjeta */
+.card-title {
+  margin: 15px 0;
+  font-size: 24px;
+  color: #333;
+  font-family: 'Dancing Script', cursive;
+}
+
+.card-description {
+  padding: 0 20px 20px;
+  font-size: 13px; /* Aumenté el tamaño de la fuente */
+  font-weight: bold; /* Negrita */
+  font-style: italic; /* Cursiva */
+  color: #666;
+  line-height: 1.6; /* Añadí un poco de espacio entre las líneas para mayor legibilidad */
+}
+
+
+/* Carrusel */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para las imágenes del carrusel */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.6s ease-in-out; /* Transición más suave */
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+  border-radius: 8px; /* Bordes redondeados en las imágenes */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Botones de control del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%; /* Botones circulares */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto al pasar el ratón */
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+/* Efecto en los botones cuando se pasa el ratón */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1); /* Agrandar un poco el botón */
+}
+
+/* Contenedor de botones debajo del carrusel */
+.card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Dancing Script', cursive; /* Fuente más cursiva */
+  transition: background 0.3s ease;
+  background: linear-gradient(45deg, #800020, #ee41cc);
+  color: white;
+}
+
+
+.btn:hover {
+  background: linear-gradient(45deg, #ee41cc, #800020);
+}
+
+/* Ajuste para botones específicos */
+.btn-primary {
+  background: linear-gradient(45deg, #7f00b2, #ff7cbc);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #ff7cbc, #7f00b2);
+
+}
+
+.btn-secondary {
+  background: linear-gradient(45deg, #800020, #ee41cc);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(45deg, #ee41cc, #800020);
+}
+
+/* Galería (oculta por defecto) */
+.gallery {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.gallery-items {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-items img,
+.gallery-items video {
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.close-gallery {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.close-gallery:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estilo del botón de cerrar rectangular con difuminado */
+.close-gallery {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(255, 77, 77, 0.8); /* Rojo con transparencia */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease-in-out, filter 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px); /* Difuminado */
+}
+
+.close-gallery:hover {
+  background-color: rgba(230, 0, 0, 0.8); /* Rojo más intenso */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px); /* Aumenta el difuminado en hover */
+}
+
+.close-gallery:focus {
+  outline: none;
+}
+
+/* Efecto al hacer clic */
+.close-gallery:active {
+  transform: scale(0.98);
+  backdrop-filter: blur(12px); /* Aumenta más el difuminado al hacer clic */
+}
+
+/* Estilo para el botón con forma de sobre de correo y tonos más rojos */
+#open-card-btn {
+  background: linear-gradient(135deg, #d32f2f, #c2185b); /* Gradiente de rojos */
+  color: white; /* Texto blanco */
+  font-size: 24px; /* Tamaño de fuente más grande */
+  padding: 20px 50px; /* Espaciado interno mayor */
+  border: none; /* Sin borde */
+  border-radius: 15px; /* Bordes redondeados para un estilo más suave */
+  cursor: pointer; /* Cursor pointer */
+  transition: all 0.3s ease; /* Transición suave para efectos */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: center;
+  display: inline-block;
+  position: absolute; /* Posición absoluta */
+  top: 50px; /* Distancia desde la parte superior */
+  left: 50%; /* Centrado horizontal */
+  transform: translateX(-50%); /* Ajuste para centrar exactamente */
+  z-index: 10; /* Asegura que esté encima del contenido */
+  overflow: hidden;
+}
+
+/* Efecto de forma de sobre */
+#open-card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: #ffffff;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease; /* Transición más lenta para simular apertura */
+  z-index: -1; /* Asegura que el triángulo quede detrás del texto */
+}
+
+/* Efecto al pasar el ratón por encima */
+#open-card-btn:hover {
+  background: linear-gradient(135deg, #b71c1c, #d50032); /* Gradiente más oscuro en hover */
+  transform: translateY(-5px); /* Mover ligeramente hacia arriba */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Efecto al presionar el botón */
+#open-card-btn:active {
+  background: linear-gradient(135deg, #9a0007, #c51162); /* Gradiente aún más oscuro al hacer clic */
+  transform: translateY(2px); /* Aplana el botón al hacer clic */
+}
+
+/* Efecto de apertura del sobre al hacer clic */
+#open-card-btn.open::before {
+  transform: rotate(0deg); /* El sobre se abre */
+  width: 0;
+  height: 0;
+}
+
+/* Estilo para la tarjeta que se muestra después de hacer clic */
+.card {
+  display: none; /* Ocultar la tarjeta al principio */
+  opacity: 0;
+  transition: opacity 1s ease; /* Transición suave */
+}
+
+.card.show {
+  display: block; /* Mostrar la tarjeta */
+  opacity: 1; /* Hacerla visible */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+#open-card-btn:hover::before {
+  transform: rotate(0deg); /* El sobre se abrirá al pasar el ratón */
+  width: 0;
+  height: 0;
+}
